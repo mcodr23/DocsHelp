@@ -125,8 +125,6 @@ The system is designed for an end-to-end learning workflow: upload, index, retri
 ## Technology Stack
 \| Category | Technology | Purpose |
 
-\|----------|------------|---------|
-
 \| Programming Language | Python 3.12 | Core application development |
 
 \| Frontend | Streamlit | Interactive web-based user interface |
@@ -158,8 +156,6 @@ DocsHelp uses OmniRoute as an OpenAI-compatible LLM gateway. The application sen
 
 \| Learning Task | LLM Gateway | Routing | Justification |
 
-\|--------------|-------------|---------|---------------|
-
 \| Document Summary | OmniRoute | Configured Combo | Generated through the centralized OmniRoute gateway. |
 
 \| Quiz Generation | OmniRoute | Configured Combo | Generated through the centralized OmniRoute gateway. |
@@ -176,8 +172,6 @@ All learning tasks use the same centralized OmniRoute Combo. The `task` value is
 DocsHelp uses specialized agents rather than assigning every responsibility to one model. Each agent owns a focused part of the learning workflow and uses shared retrieval and provider services when required.
 
 \| Agent | Responsibility |
-
-\|--------|----------------|
 
 \| Document Processing Agent | Extracts PDF text, chunks documents, generates embeddings, and stores vectors in ChromaDB. |
 
@@ -350,8 +344,6 @@ Semantic retrieval finds conceptually related content even when exact query term
 ### RAG Components
 \| Component | Responsibility |
 
-\|-----------|----------------|
-
 \| PyMuPDF | Extracts text from uploaded PDF documents. |
 
 \| Document Chunker | Splits extracted text into semantic chunks. |
@@ -375,8 +367,6 @@ DocsHelp follows a layered architecture that connects the Streamlit interface, a
 
 \| Layer | Responsibility |
 
-\|--------|----------------|
-
 \| Presentation Layer | Provides the Streamlit interface for uploading documents and using learning features. |
 
 \| Application Layer | Coordinates processing, retrieval, summaries, questions, quizzes, and reflections. |
@@ -385,7 +375,7 @@ DocsHelp follows a layered architecture that connects the Streamlit interface, a
 
 \| AI Layer | Centralized model selection and generation via OmniRoute. |
 
-![System Architecture](assets/screenshots/architecture.png)
+![System Architecture]()
 
 ### End-to-End System Workflow
 ```text
@@ -565,8 +555,6 @@ DocsHelp/
 ```
 
 \| Directory | Responsibility |
-
-\|-----------|----------------|
 
 \| ****agents/**** | AI agents, task-based routing, and structured communication. |
 
@@ -798,7 +786,7 @@ The following screenshots cover the main learning workflow.
 ![Reflection Page](assets/screenshots/reflection.png)
 
 ### System Architecture
-![System Architecture](assets/screenshots/architecture.png)
+![System Architecture]()
 
 ---
 
@@ -816,8 +804,6 @@ The RAG pipeline was evaluated with representative learning queries. Each query 
 
 ### Retrieval Evaluation Results
 \| Query | Retrieved Context | Response Quality | Observation |
-
-\|--------|-------------------|------------------|-------------|
 
 \| Summarize the uploaded lecture notes | Relevant lecture sections | High | Retrieved context matched the uploaded lecture content and supported accurate summarization. |
 
